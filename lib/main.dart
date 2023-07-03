@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_flutter_09_codingpapa01_http/dio_server.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,15 +27,21 @@ class MyHomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              server.getReq();
+            },
             child: const Text('GET'),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              server.postReq();
+            },
             child: const Text('POST'),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              server.getReqWzQuery();
+            },
             child: const Text('GET with Query'),
           ),
         ],
