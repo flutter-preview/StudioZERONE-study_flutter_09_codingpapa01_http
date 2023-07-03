@@ -46,7 +46,13 @@ class MyHomePage extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              server.getReqWzQuery();
+              server.postReqWithMap();
+            },
+            child: const Text('POST with Map'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              server.getReqWithQuery();
             },
             child: const Text('GET with Query'),
           ),

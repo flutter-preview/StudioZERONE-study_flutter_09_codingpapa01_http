@@ -30,7 +30,22 @@ class Server {
     print(response.data.toString());
   }
 
-  Future<void> getReqWzQuery() async {
+  Future<void> postReqWithMap() async {
+    Response response;
+    Dio dio = Dio();
+    Map<String, dynamic> data = {
+      "id": 12,
+      "name": "May the FORCE be with you!",
+    };
+    data.putIfAbsent('userId', () => 189);
+    response = await dio.post(
+      _API_PREFIX,
+      data: data,
+    );
+    print(response.data.toString());
+  }
+
+  Future<void> getReqWithQuery() async {
     Response response;
     Dio dio = Dio();
     response = await dio.get(
