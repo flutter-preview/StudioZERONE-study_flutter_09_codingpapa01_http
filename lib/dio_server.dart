@@ -10,6 +10,13 @@ class Server {
     print(response.data.toString());
   }
 
+  Future<void> getReqAll() async {
+    Response response;
+    Dio dio = Dio();
+    response = await dio.get(_API_PREFIX);
+    print(response.data.toString());
+  }
+
   Future<void> postReq() async {
     Response response;
     Dio dio = Dio();

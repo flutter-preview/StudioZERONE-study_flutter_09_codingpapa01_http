@@ -34,6 +34,12 @@ class MyHomePage extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
+              server.getReqAll();
+            },
+            child: const Text('GET All Data'),
+          ),
+          ElevatedButton(
+            onPressed: () {
               server.postReq();
             },
             child: const Text('POST'),
